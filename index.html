@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-responsive.css">
+
+    <!--Tipografíar-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <!--//Tipografíar-->
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-alura">
+            <img src="images/logo-alura.png" alt="Logotipo de Alura">
+        </div>
+    </header>
+
+    <main>
+        <form class="bloque-izq">
+            <textarea class="input-text" cols="20" rows="3" placeholder="Ingrese el texto aquí" onkeypress="return validacion(event)" required></textarea>
+
+            <fieldset class="indicacion">
+                <img src="images/peligro.png" alt="Icono de Exclamación">
+                <p class="texto-indicacion">Solo letras minúsculas. No se aceptan acentos, caracteres especiales y números.</p>
+            </fieldset>
+
+            <fieldset class="botones">
+                <input class="btn-encriptar" type="button" type="submit" value="Encriptar" onclick="resultadoEncriptar()">
+                <input class="btn-desencriptar" type="button" type="submit" value="Desencriptar" onclick="resultadoDesencriptar()">
+            </fieldset>
+        </form>
+
+        <div class="bloque-der">
+            <div class="instruccion">
+                <img src="images/buscador-pikachu.png" alt="Ilustración de persona buscando con lupa">
+
+                <div class="textos">
+                    <h2>Ningún mensaje fue encontrado </h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+
+            <form class="mensaje">
+                <textarea class="output-text" cols="15" rows="8" readonly></textarea>
+                <input class="btn-copiar" type="button" value="Copiar" onclick="copiar()">
+            </form>
+        </div>
+
+    </main>
+    <br><br>
+    <footer>
+
+        <p>Desarrolado por <strong>Juan Andres Garcia</strong></p>
+        <p>|</p>
+        <p><a>Juan.creativo.ideas@gmai.com</a></p>
+
+
+    </footer>
+    <script src="Index.js"></script>
+</body>
+
+</html>
